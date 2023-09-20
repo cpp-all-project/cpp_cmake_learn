@@ -13,6 +13,7 @@ set(CONFIG_LIB_NAME config)
 set(UTILS_LIB_NAME utils)
 
 # 指定嵌套 cmake 的目录名
+# 嵌套 cmake clion 中命令配置 -> 运行/调试配置 -> 添加 cmake 应用程序 -> 目标选择：所有目标 -> 选择一个可执行文件
 add_subdirectory(utils)
 add_subdirectory(config)
 add_subdirectory(test)
