@@ -8,4 +8,5 @@ int subtract(int a, int b);
 int multiply(int a, int b);
 // 除法
 double divide(int a, int b);
+
 #endif
