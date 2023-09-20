@@ -7,7 +7,7 @@ project(cpp)
 set(CMAKE_CXX_STANDARD 17)
 # 设置动态库静态库文件路径 LIBRARY_OUTPUT_PATH
 # 设置静态库文件路径 EXECUTABLE_OUTPUT_PATH
-set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../)
 file(GLOB SRC ${PROJECT_SOURCE_DIR}/src/*.cpp)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 

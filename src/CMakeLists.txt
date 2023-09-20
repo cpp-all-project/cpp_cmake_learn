@@ -31,7 +31,7 @@ message("root files:\n\t${SRC}")
 include_directories(${HEAD_PATH})
 
 # 指定动态、静态库路径，如果是系统的它可以自己识别，但是如果是三方的可能找不到
-link_directories(${PROJECT_SOURCE_DIR}/../lib/compile/lib)
+link_directories(${PROJECT_SOURCE_DIR}/../lib)
 # 链接静态库
 # 参数一: 静态库路径
 # 参数二: 静态库名字，可以掐头(lib)去尾(.a)
