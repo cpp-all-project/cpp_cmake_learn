@@ -3,10 +3,13 @@ cmake_minimum_required(VERSION 3.26)
 # 项目名称
 project(learn_cpp VERSION 1.0.0 DESCRIPTION "learn cpp")
 
+# include_directories 指定头文件对应的目录
+include_directories(${PROJECT_SOURCE_DIR}/config)
+include_directories(${PROJECT_SOURCE_DIR}/utils)
+
 # 设置嵌套 cmake 中的共享静态库的路径
 set(LIB_PATH ${PROJECT_SOURCE_DIR}/lib)
 set(EXEC_PATH ${PROJECT_SOURCE_DIR}/bin)
-set(HEAD_PATH ${PROJECT_SOURCE_DIR}/include)
 
 # 设置嵌套 cmake 中的库名字
 set(CONFIG_LIB_NAME config)
@@ -42,15 +45,13 @@ set(EXECUTABLE_OUTPUT_PATH ${EXEC_PATH})
 file(GLOB SRC ${PROJECT_SOURCE_DIR}/main.cpp)
 # 打印日志
 message("root files:\n\t${SRC}")
-# include_directories 指定头文件对应的目录
-include_directories(${HEAD_PATH})
 
 # 指定动态、静态库路径，如果是系统的它可以自己识别，但是如果是三方的可能找不到
 link_directories(${LIB_PATH})
 # 链接静态库
 # 参数一: 静态库路径
 # 参数二: 静态库名字，可以掐头(lib)去尾(.a)
-link_libraries(static_lib)
+link_libraries(static_lib ${CONFIG_LIB_NAME} ${UTILS_LIB_NAME})
 
 # 生成可执行程序
 # 如果链接静态库，打包时候会打包到 app 可执行文件里

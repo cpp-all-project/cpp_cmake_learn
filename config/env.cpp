@@ -1,4 +1,5 @@
 #include <cstdio>
+#include "config.h"
 
 void debug_print() {
 #ifdef DEBUG

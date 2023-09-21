@@ -1,6 +1,7 @@
 #include <iostream>
 //#include <windows.h>
-#include "head.h"
+#include "utils.h"
+#include "config.h"
 
 int main() {
     std::locale::global(std::locale(""));

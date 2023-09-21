@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.26)
 project(utils)
 
 aux_source_directory(./ SRC)
-include_directories(${HEAD_PATH})
 set(LIBRARY_OUTPUT_PATH ${LIB_PATH})
 
 
