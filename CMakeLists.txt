@@ -31,6 +31,7 @@ add_definitions(-DDEBUG)
 # CMAKE_CURRENT_SOURCE_DIR 获取 CMakeLists.txt 文件的目录
 set(CMAKE_CXX_STANDARD 17)
 # EXECUTABLE_OUTPUT_PATH: 指定可执行文件的输出路径
+# 不填写默认为每个子下的目录文件夹里
 set(EXECUTABLE_OUTPUT_PATH ${EXEC_PATH})
 
 # 搜索某个目录下的源文件并赋值第二个参数变量中
@@ -62,5 +63,5 @@ add_executable(app ${SRC})
 # 指定动态库路径(写在这个文件最后，要先生成文件再链接)
 # 参数一: 为谁添加动态库，可以是库、可执行文件、源文件
 # 参数二: 权限
-# 参数三: 动态库名字
+# 参数三: 动态、静态库名字，静态库不用添加权限关键字
 target_link_libraries(app PUBLIC dyn_lib)
