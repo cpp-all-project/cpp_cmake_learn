@@ -11,6 +11,7 @@ cmake ./CMakeLists.txt -D变量名=值
 ### 制作库文件
 ```shell
 # windows 需要执行一次,指定 Unix 平台的 Makefiles，因为默认是 windows 平台的 msvc
+# clion 中右上角 Debug 选项下，配置 cmake 命令中 -> 生成器可选择为 Unix Makefiles
 cmake .. -G "Unix Makefiles"
 make
 ```
