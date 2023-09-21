@@ -1,6 +1,6 @@
 # 嵌套 cmake 的子目录
 cmake_minimum_required(VERSION 3.26)
-project(env_config)
+project(config)
 
 aux_source_directory(./ SRC)
 include_directories(${HEAD_PATH})
